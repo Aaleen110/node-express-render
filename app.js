@@ -5,9 +5,9 @@ const port = process.env.PORT || 3001;
 app.get("/", (req, res) => res.type('html').send(html));
 
 // Defining get request at '/' route
-app.get('/getToken', function(req, res) {
+app.get('/getApiKey', function(req, res) {
   res.json({
-    token: "your_token_goes_here"
+    apiKey: "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"
   });
 });
 
