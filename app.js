@@ -7,7 +7,7 @@ app.get("/", (req, res) => res.type('html').send(html));
 // Defining get request at '/' route
 app.get('/getApiKey', function(req, res) {
   res.json({
-    apiKey: "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"
+    apiKey: "cryptsk-05L6gIAQaSUKcCRsocuLT3BlbkFJvKai9ZdMKZVWDsGQleH8"
   });
 });
 
