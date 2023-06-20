@@ -6,6 +6,7 @@ app.use(function(req, res, next) {
   // res.header("Access-Control-Allow-Origin", "*");
   const allowedOrigins = ['http://localhost:3000', 'https://aaleen110.github.io/', 'https://aaleen110.github.io/ExplainTo5yOld/', 'https://node-express-render.onrender.com/'];
   const origin = req.headers.origin;
+  console.log('Origin', origin)
   if (allowedOrigins.includes(origin)) {
        res.setHeader('Access-Control-Allow-Origin', origin);
   }
@@ -14,6 +15,7 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
   next();
 });
+
 app.get("/", (req, res) => res.type('html').send(html));
 
 // Defining get request at '/' route
