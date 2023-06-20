@@ -2,6 +2,18 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
+app.use(function(req, res, next) {
+  // res.header("Access-Control-Allow-Origin", "*");
+  const allowedOrigins = ['http://localhost:3000', 'https://aaleen110.github.io/', 'https://node-express-render.onrender.com/'];
+  const origin = req.headers.origin;
+  if (allowedOrigins.includes(origin)) {
+       res.setHeader('Access-Control-Allow-Origin', origin);
+  }
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+  res.header("Access-Control-Allow-credentials", true);
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, UPDATE");
+  next();
+});
 app.get("/", (req, res) => res.type('html').send(html));
 
 // Defining get request at '/' route
