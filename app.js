@@ -4,7 +4,7 @@ const port = process.env.PORT || 3001;
 
 app.use(function(req, res, next) {
   // res.header("Access-Control-Allow-Origin", "*");
-  const allowedOrigins = ['http://localhost:3000', 'https://aaleen110.github.io/', 'https://aaleen110.github.io/ExplainTo5yOld/', 'https://node-express-render.onrender.com/'];
+  const allowedOrigins = ['http://localhost:3000', 'https://aaleen110.github.io', 'https://aaleen110.github.io/ExplainTo5yOld', 'https://node-express-render.onrender.com'];
   const origin = req.headers.origin;
   console.log('Origin', origin)
   if (allowedOrigins.includes(origin)) {
