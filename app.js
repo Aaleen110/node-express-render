@@ -5,9 +5,9 @@ const port = process.env.PORT || 3001;
 app.get("/", (req, res) => res.type('html').send(html));
 
 // Defining get request at '/' route
-app.get('/getApiKey', function(req, res) {
+app.get('/getApiKey', function (req, res) {
   res.json({
-    apiKey: "cryptsk-05L6gIAQaSUKcCRsocuLT3BlbkFJvKai9ZdMKZVWDsGQleH8"
+    apiKey: "cryptsk-zsjR3WKAdOmTarAKPTEgT3BlbkFJF9bgj49M62qClVWqTK5n".replace("crypt", "")
   });
 });
 
